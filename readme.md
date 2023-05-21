@@ -1,1 +1,128 @@
 
+# Music Streaming Service API
+
+This repository contains the source code for a Music Streaming Service API. It provides endpoints to manage users, songs, and playlists. The API is developed using Java and Spring Boot.
+
+## Models
+
+### User
+
+The `User` model represents a user in the system.
+
+Attributes:
+- `id` (Long): The unique identifier of the user.
+- `username` (String): The username of the user.
+- `password` (String): The password of the user.
+- `role` (UserRole): The role of the user (ADMIN or USER_ROLE).
+
+### Song
+
+The `Song` model represents a song in the music streaming service.
+
+Attributes:
+- `id` (Long): The unique identifier of the song.
+- `title` (String): The title of the song.
+- `artist` (String): The artist of the song.
+- `genre` (String): The genre of the song.
+
+### Playlist
+
+The `Playlist` model represents a playlist created by a user.
+
+Attributes:
+- `id` (Long): The unique identifier of the playlist.
+- `name` (String): The name of the playlist.
+- `user` (User): The user who created the playlist.
+- `songs` (List<Song>): The list of songs in the playlist.
+
+## Controllers
+
+### UserController
+
+The `UserController` handles user-related operations.
+
+Endpoints:
+- `POST /users/register`: Registers a new user.
+- `POST /users/password/reset`: Resets the password for a user.
+- `GET /users/{id}`: Retrieves a user by ID.
+- `GET /users/`: Retrieves all users.
+- `PUT /users/{id}`: Updates a user.
+- `DELETE /users/{id}`: Deletes a user.
+
+### SongController
+
+The `SongController` handles song-related operations.
+
+Endpoints:
+- `POST /songs/`: Adds a new song (requires ADMIN role).
+- `GET /songs/`: Retrieves all songs.
+- `GET /songs/{id}`: Retrieves a song by ID.
+- `PUT /songs/{id}`: Updates a song (requires ADMIN role).
+- `DELETE /songs/{id}`: Deletes a song (requires ADMIN role).
+
+### PlaylistController
+
+The `PlaylistController` handles playlist-related operations.
+
+Endpoints:
+- `POST /playlists/`: Creates a new playlist (requires USER_ROLE).
+- `GET /playlists/`: Retrieves all playlists.
+- `GET /playlists/{id}`: Retrieves a playlist by ID.
+- `PUT /playlists/{id}`: Updates a playlist (requires USER_ROLE).
+- `DELETE /playlists/{id}`: Deletes a playlist (requires USER_ROLE).
+
+## Configuration
+
+### SecurityConfig
+
+The `SecurityConfig` class provides configuration for security-related settings.
+
+- PasswordEncoder: Configures the password encoder for user password hashing.
+
+## Application Properties
+
+The `application.properties` file contains the configuration properties for the application. Here are the contents of the file:
+
+```properties
+# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/music_streaming_service_db
+spring.datasource.username=db_username
+spring.datasource.password=db_password
+
+# Hibernate Configuration
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.jpa.hibernate.ddl-auto=update
+
+# Spring Security Configuration
+spring.security.user.name=admin_username
+spring.security.user.password=admin_password
+spring.security.user.roles=ADMIN
+
+# Server Configuration
+server.port=8080
+Please replace db_username, db_password, admin_username, and admin_password with your actual database and administrator credentials.
+
+## Getting Started
+To run the application locally, follow these steps:
+
+Clone the repository: git clone <repository-url>
+Configure the application.properties file as described above.
+Build the project: ./mvnw clean install
+Run the application: ./mvnw spring-boot:run
+The application will be accessible at http://localhost:8080
+Make sure you have Java and Maven installed on your system before running the application.
+
+## Deployment
+The application can be deployed to a server or cloud platform of your choice. In this case, the project has been deployed on an EC2 instance.
+
+To deploy the application:
+
+Set up an EC2 instance and configure it with the necessary environment.
+Build the project: ./mvnw clean install
+Transfer the generated JAR file to the EC2 instance.
+Run the application: java -jar music-streaming-service-api.jar
+The application will be accessible at http://your-ec2-instance-ip:8080
+Remember to update the security settings, database configuration, and any other necessary configurations based on your deployment environment.
+
+Contributing
+Contributions to this project are welcome. Feel free to submit bug reports, feature requests, or pull requests.
