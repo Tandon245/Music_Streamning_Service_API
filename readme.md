@@ -3,6 +3,16 @@
 
 This repository contains the source code for a Music Streaming Service API. It provides endpoints to manage users, songs, and playlists. The API is developed using Java and Spring Boot.
 
+## Prerequisites
+
+Before running the project, ensure that the following prerequisites are met:
+
+- [Java JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Maven](https://maven.apache.org/download.cgi)
+- Spring boot MVN
+
+Please make sure you have Java JDK 11 and Maven installed on your machine before proceeding with the installation and usage steps.
+
 ## Models
 
 ### User
