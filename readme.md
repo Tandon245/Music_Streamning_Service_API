@@ -91,6 +91,63 @@ Endpoints:
 The `SecurityConfig` class provides configuration for security-related settings.
 
 - PasswordEncoder: Configures the password encoder for user password hashing.
+  
+  
+## Deployment
+The application can be deployed to a server or cloud platform of your choice. In this case, the project has been deployed on an EC2 instance.
+
+To deploy the application:
+## Summary
+
+The Music API is designed to simplify the process of fetching music-related data for developers. It offers a comprehensive set of endpoints that enable users to retrieve information about artists, albums, tracks, genres, and more. The API leverages the Spring Boot framework and Java programming language to ensure high performance, scalability, and reliability.
+
+## Goal
+
+The goal of the Music API project is to provide a user-friendly and efficient solution for developers who require access to music-related data. By offering a range of well-documented endpoints, the API aims to streamline the retrieval process and empower developers to build innovative and feature-rich music applications. The project prioritizes ease of use, robustness, and adherence to industry standards.
+
+---
+
+## Getting Started
+To run the application locally, follow these steps:
+
+Clone the repository: git clone <repository-url>
+Configure the application.properties file as described above.
+Build the project: ./mvnw clean install
+Run the application: ./mvnw spring-boot:run
+The application will be accessible at http://localhost:8080
+Make sure you have Java and Maven installed on your system before running the application.
+
+
+Set up an EC2 instance and configure it with the necessary environment.
+Build the project: ./mvnw clean install
+Transfer the generated JAR file to the EC2 instance.
+Run the application: java -jar music-streaming-service-api.jar
+The application will be accessible at http://your-ec2-instance-ip:8080
+Remember to update the security settings, database configuration, and any other necessary configurations based on your deployment environment.
+
+Contributing
+Contributions to this project are welcome. Feel free to submit bug reports, feature requests, or pull requests.
+
+## Getting Started
+To run the application locally, follow these steps:
+
+Clone the repository: git clone <repository-url>
+Configure the application.properties file as described above.
+Build the project: ./mvnw clean install
+Run the application: ./mvnw spring-boot:run
+The application will be accessible at http://localhost:8080
+Make sure you have Java and Maven installed on your system before running the application.
+
+
+Set up an EC2 instance and configure it with the necessary environment.
+Build the project: ./mvnw clean install
+Transfer the generated JAR file to the EC2 instance.
+Run the application: java -jar music-streaming-service-api.jar
+The application will be accessible at http://your-ec2-instance-ip:8080
+Remember to update the security settings, database configuration, and any other necessary configurations based on your deployment environment.
+
+Contributing
+Contributions to this project are welcome. Feel free to submit bug reports, feature requests, or pull requests.
 
 ## Application Properties
 
@@ -114,37 +171,3 @@ spring.security.user.roles=ADMIN
 # Server Configuration
 server.port=8080
 Please replace db_username, db_password, admin_username, and admin_password with your actual database and administrator credentials.
-
-## Getting Started
-To run the application locally, follow these steps:
-
-Clone the repository: git clone <repository-url>
-Configure the application.properties file as described above.
-Build the project: ./mvnw clean install
-Run the application: ./mvnw spring-boot:run
-The application will be accessible at http://localhost:8080
-Make sure you have Java and Maven installed on your system before running the application.
-
-## Deployment
-The application can be deployed to a server or cloud platform of your choice. In this case, the project has been deployed on an EC2 instance.
-
-To deploy the application:
-## Summary
-
-The Music API is designed to simplify the process of fetching music-related data for developers. It offers a comprehensive set of endpoints that enable users to retrieve information about artists, albums, tracks, genres, and more. The API leverages the Spring Boot framework and Java programming language to ensure high performance, scalability, and reliability.
-
-## Goal
-
-The goal of the Music API project is to provide a user-friendly and efficient solution for developers who require access to music-related data. By offering a range of well-documented endpoints, the API aims to streamline the retrieval process and empower developers to build innovative and feature-rich music applications. The project prioritizes ease of use, robustness, and adherence to industry standards.
-
----
-
-Set up an EC2 instance and configure it with the necessary environment.
-Build the project: ./mvnw clean install
-Transfer the generated JAR file to the EC2 instance.
-Run the application: java -jar music-streaming-service-api.jar
-The application will be accessible at http://your-ec2-instance-ip:8080
-Remember to update the security settings, database configuration, and any other necessary configurations based on your deployment environment.
-
-Contributing
-Contributions to this project are welcome. Feel free to submit bug reports, feature requests, or pull requests.
