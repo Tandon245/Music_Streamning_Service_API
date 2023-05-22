@@ -129,6 +129,15 @@ Make sure you have Java and Maven installed on your system before running the ap
 The application can be deployed to a server or cloud platform of your choice. In this case, the project has been deployed on an EC2 instance.
 
 To deploy the application:
+## Summary
+
+The Music API is designed to simplify the process of fetching music-related data for developers. It offers a comprehensive set of endpoints that enable users to retrieve information about artists, albums, tracks, genres, and more. The API leverages the Spring Boot framework and Java programming language to ensure high performance, scalability, and reliability.
+
+## Goal
+
+The goal of the Music API project is to provide a user-friendly and efficient solution for developers who require access to music-related data. By offering a range of well-documented endpoints, the API aims to streamline the retrieval process and empower developers to build innovative and feature-rich music applications. The project prioritizes ease of use, robustness, and adherence to industry standards.
+
+---
 
 Set up an EC2 instance and configure it with the necessary environment.
 Build the project: ./mvnw clean install
