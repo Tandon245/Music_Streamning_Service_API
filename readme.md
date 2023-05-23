@@ -108,26 +108,7 @@ The goal of the Music API project is to provide a user-friendly and efficient so
 
 ---
 
-## Getting Started
-To run the application locally, follow these steps:
 
-Clone the repository: git clone <repository-url>
-Configure the application.properties file as described above.
-Build the project: ./mvnw clean install
-Run the application: ./mvnw spring-boot:run
-The application will be accessible at http://localhost:8080
-Make sure you have Java and Maven installed on your system before running the application.
-
-
-Set up an EC2 instance and configure it with the necessary environment.
-Build the project: ./mvnw clean install
-Transfer the generated JAR file to the EC2 instance.
-Run the application: java -jar music-streaming-service-api.jar
-The application will be accessible at http://your-ec2-instance-ip:8080
-Remember to update the security settings, database configuration, and any other necessary configurations based on your deployment environment.
-
-Contributing
-Contributions to this project are welcome. Feel free to submit bug reports, feature requests, or pull requests.
 
 ## Getting Started
 To run the application locally, follow these steps:
