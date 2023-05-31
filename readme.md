@@ -1,7 +1,7 @@
 
 # Music Streaming Service API
 
-This repository contains the source code for a Music Streaming Service API. It provides endpoints to manage users, songs, and playlists. The API is developed using Java and Spring Boot.
+This repository contains the source code for a Music Streaming Service API. It provides endpoints to manage users, songs, and playlists. The API is developed using Java and Spring Boot. 
 
 ## Access Documentation here
 url_Ec2--->http://3.111.169.143:8080/swagger-ui/index.html#/
